@@ -1,75 +1,45 @@
-# React + TypeScript + Vite
+      ## Simple Component calling Example
+      <SimpleComponent />
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+      ## Simple Multi-Component calling Example
+      <AnotherComponent />
 
-Currently, two official plugins are available:
+      ## Simple Component with UseState and Interactive Counter Example
+      <CounterFunctionExm />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+      ##  Simple Class Component with LifeCycle Methods Example
+      <ClassComponentExm name="React" />
 
-## React Compiler
+      ##  Props Passing Example
+      <Greetings name="Peter" age={20} />
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+      ##  Props Passing - Default and Required Example
+      <UserCardStyle
+        name="wills.gramim@example.com"
+        avatar="https://i.pravatar.cc/150?img=1"
+        email="www.aaa@d.com"
+      />
 
-Note: This will impact Vite dev & build performances.
+      ##  Props passing with Nullable / Default parameter Example
+      <UserCard
+        name="Peter Wong"
+        avatar="https://i.pravatar.cc/150?img=3"
+        email="peter.wong@gmail.com"
+      />
+      <UserCard
+        name="Jones Wing"
+        avatar="https://i.pravatar.cc/150?img=4"
+        email="jones.wing@example.com"
+      />
 
-## Expanding the ESLint configuration
+      ##  Props Passing - Conditional Rendering Example
+      <ConditionalRenderFC name="Pete" age={33} />
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+      ##  Simple Prop-Drilling Example
+      <Parent />
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+      ##  Prop-Drilling With Component Composition Example
+      <ParentCom />
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+      ##  Prop-Drilling With Context API Example
+      <ParentCon />
